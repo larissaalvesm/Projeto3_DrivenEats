@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 414px;
+    height: 1026px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #E5E5E5;
+}
+
+.topo {
+    width: 414px;
+    height: 92px;
+    background-color: #CF2B2B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.topo h1 {
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 55px;
+    letter-spacing: -0.012em;
+    color: #FFFFFF;
+    margin-left: 21px;
+}
+
+.topo h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin-left: 21px;
+}
+
+.botao-finalizar {
+    background-color: #FFFFFF;
+    height: 92px;
+    width: 414px;
+    position: fixed;
+    bottom: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selecionar-itens {
+    width: 364px;
+    height: 61px;
+    background-color: #CBCBCB;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selecionar-itens h1 {
+    width: 200px;
+    height: 53px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+}
+
+.container-conteudo {
+    margin-left: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 842px;
+}
+
+.container-conteudo h1 {
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.018em;
+    color: #333333;
+
+    margin-bottom: 5px;
+}
+
+.cards-prato,
+.cards-bebida,
+.cards-sobremesa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.cards-prato div,
+.cards-bebida div,
+.cards-sobremesa div {
+    width: 172px;
+    height: 216px;
+    left: 19px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding-top: 18px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-bottom: 13px;
+
+    margin-right: 16px;
+}
+
+.container-conteudo img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+}
+
+.container-conteudo h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+
+}
+
+.container-conteudo p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    color: #A6A6A6;
+}
+
+.container-conteudo h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
