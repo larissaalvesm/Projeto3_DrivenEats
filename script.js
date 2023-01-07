@@ -15,6 +15,8 @@ function selecionarPrato(cardClicado) {
     const check = document.querySelector('.cards-prato .selecionado ion-icon');
     console.log(check);
     check.classList.remove('escondido');
+
+    fecharPedido();
 }
 
 function selecionarBebida(cardClicado) {
@@ -34,6 +36,8 @@ function selecionarBebida(cardClicado) {
     const check = document.querySelector('.cards-bebida .selecionado ion-icon');
     console.log(check);
     check.classList.remove('escondido');
+
+    fecharPedido();
 }
 
 function selecionarSobremesa(cardClicado) {
@@ -53,4 +57,21 @@ function selecionarSobremesa(cardClicado) {
     const check = document.querySelector('.cards-sobremesa .selecionado ion-icon');
     console.log(check);
     check.classList.remove('escondido');
+
+    fecharPedido();
+}
+
+function fecharPedido(cardClicado) {
+
+    const pratoSelecionado = document.querySelector('.cards-prato .selecionado');
+    const bebidaSelecionada = document.querySelector('.cards-bebida .selecionado');
+    const sobremesaSelecionada = document.querySelector('.cards-sobremesa .selecionado');
+    const botaoSelecionarItens = document.querySelector('.selecionar-itens');
+
+    if (pratoSelecionado !== null && bebidaSelecionada !== null && sobremesaSelecionada !== null) {
+        botaoSelecionarItens.classList.add('verde');
+        botaoSelecionarItens.innerHTML = "Fechar pedido";
+        botaoSelecionarItens.disabled = false;
+    }
+
 }
