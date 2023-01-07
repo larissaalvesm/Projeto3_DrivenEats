@@ -1,7 +1,9 @@
+let prato;
+let valorPrato;
+
 function selecionarPrato(cardClicado) {
 
     const cardSelecionadoAnteriormente = document.querySelector('.cards-prato .selecionado');
-    console.log(cardSelecionadoAnteriormente);
 
     if (cardSelecionadoAnteriormente !== null) {
         document.querySelector('.cards-prato .selecionado ion-icon').classList.add('escondido');
@@ -9,20 +11,24 @@ function selecionarPrato(cardClicado) {
     }
 
     const card = document.querySelector(cardClicado);
-    console.log(cardClicado);
     card.classList.add('selecionado');
 
+    prato = document.querySelector('.cards-prato .selecionado h2').innerHTML;
+    valorPrato = document.querySelector('.cards-prato .selecionado h3').innerHTML;
+    valorPrato = Number(valorPrato.substring(3));
+
     const check = document.querySelector('.cards-prato .selecionado ion-icon');
-    console.log(check);
     check.classList.remove('escondido');
 
     fecharPedido();
 }
 
+let bebida;
+let valorBebida;
+
 function selecionarBebida(cardClicado) {
 
     const cardSelecionadoAnteriormente = document.querySelector('.cards-bebida .selecionado');
-    console.log(cardSelecionadoAnteriormente);
 
     if (cardSelecionadoAnteriormente !== null) {
         document.querySelector('.cards-bebida .selecionado ion-icon').classList.add('escondido');
@@ -30,20 +36,24 @@ function selecionarBebida(cardClicado) {
     }
 
     const card = document.querySelector(cardClicado);
-    console.log(cardClicado);
     card.classList.add('selecionado');
 
+    bebida = document.querySelector('.cards-bebida .selecionado h2').innerHTML;
+    valorBebida = document.querySelector('.cards-bebida .selecionado h3').innerHTML;
+    valorBebida = Number(valorBebida.substring(3));
+
     const check = document.querySelector('.cards-bebida .selecionado ion-icon');
-    console.log(check);
     check.classList.remove('escondido');
 
     fecharPedido();
 }
 
+let sobremesa;
+let valorSobremesa;
+
 function selecionarSobremesa(cardClicado) {
 
     const cardSelecionadoAnteriormente = document.querySelector('.cards-sobremesa .selecionado');
-    console.log(cardSelecionadoAnteriormente);
 
     if (cardSelecionadoAnteriormente !== null) {
         document.querySelector('.cards-sobremesa .selecionado ion-icon').classList.add('escondido');
@@ -51,11 +61,13 @@ function selecionarSobremesa(cardClicado) {
     }
 
     const card = document.querySelector(cardClicado);
-    console.log(cardClicado);
     card.classList.add('selecionado');
 
+    sobremesa = document.querySelector('.cards-sobremesa .selecionado h2').innerHTML;
+    valorSobremesa = document.querySelector('.cards-sobremesa .selecionado h3').innerHTML;
+    valorSobremesa = Number(valorSobremesa.substring(3));
+
     const check = document.querySelector('.cards-sobremesa .selecionado ion-icon');
-    console.log(check);
     check.classList.remove('escondido');
 
     fecharPedido();
@@ -74,4 +86,13 @@ function fecharPedido(cardClicado) {
         botaoSelecionarItens.disabled = false;
     }
 
+}
+
+let mensagem;
+
+
+function enviarPedido() {
+    mensagem = `Olá, gostaria de fazer o pedido: \n - Prato: ${prato} \n - Bebida: ${bebida} \n - Sobremesa: ${sobremesa} \n Total: R$ ${(valorPrato + valorBebida + valorSobremesa).toFixed(2)}`;
+
+    mensagem = encodeURI(mensagem);
 }

@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 .container {
     width: 414px;
     height: 934px;
@@ -94,11 +99,6 @@
     border: none;
 }
 
-.selecionar-itens h1 {
-    width: 200px;
-    height: 53px;
-}
-
 .container-conteudo {
     margin-left: 21px;
     display: flex;
@@ -128,7 +128,7 @@
     justify-content: space-between;
     align-items: center;
 
-    overflow: hidden;
+    overflow-x: hidden;
     overflow-x: scroll;
 }
 

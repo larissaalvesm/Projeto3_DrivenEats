@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>DrivenEats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +34,7 @@
                         <h2 data-test="item-name">Frango Yin Yang</h2>
                         <p>Um pouco de batata, um pouco de salada</p>
                         <div class="check">
-                            <h3 data-test="item-price">R$ 14,90</h3>
+                            <h3 data-test="item-price">R$ 14.90</h3>
                             <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
@@ -42,7 +43,7 @@
                         <h2 data-test="item-name">Salada Yin Yang</h2>
                         <p>Um pouco de batata, um pouco de salada</p>
                         <div class="check">
-                            <h3 data-test="item-price">R$ 9,90</h3>
+                            <h3 data-test="item-price">R$ 9.90</h3>
                             <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
@@ -51,7 +52,7 @@
                         <h2 data-test="item-name">Purê Yin Yang</h2>
                         <p>Um pouco de batata, um pouco de salada</p>
                         <div class="check">
-                            <h3 data-test="item-price">R$ 10,90</h3>
+                            <h3 data-test="item-price">R$ 10.90</h3>
                             <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
@@ -65,7 +66,7 @@
                         <h2 data-test="item-name">Coquinha gelada</h2>
                         <p>Lata 350ml</p>
                         <div class="check">
-                            <h3 data-test="item-price">R$ 5,90</h3>
+                            <h3 data-test="item-price">R$ 5.90</h3>
                             <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
@@ -74,7 +75,7 @@
                         <h2 data-test="item-name">Sprite gelado</h2>
                         <p>Lata 350ml</p>
                         <div class="check">
-                            <h3 data-test="item-price">R$ 4,90</h3>
+                            <h3 data-test="item-price">R$ 4.90</h3>
                             <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
@@ -83,7 +84,7 @@
                         <h2 data-test="item-name">Guaraná gelado</h2>
                         <p>Lata 350ml</p>
                         <div class="check">
-                            <h3 data-test="item-price">R$ 5,50</h3>
+                            <h3 data-test="item-price">R$ 5.50</h3>
                             <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
@@ -97,7 +98,7 @@
                         <h2 data-test="item-name">Pudim</h2>
                         <p>Apenas pudim</p>
                         <div class="check">
-                            <h3 data-test="item-price">R$ 7,90</h3>
+                            <h3 data-test="item-price">R$ 7.90</h3>
                             <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
@@ -106,7 +107,7 @@
                         <h2 data-test="item-name">Torta chocolate</h2>
                         <p>Chocolate ao leite e chocolate branco</p>
                         <div class="check">
-                            <h3 data-test="item-price">R$ 8,90</h3>
+                            <h3 data-test="item-price">R$ 8.90</h3>
                             <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
@@ -115,7 +116,7 @@
                         <h2 data-test="item-name">Sorvete</h2>
                         <p>Pote 300ml sabor napolitano</p>
                         <div class="check">
-                            <h3 data-test="item-price">R$ 9,90</h3>
+                            <h3 data-test="item-price">R$ 9.90</h3>
                             <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
@@ -124,9 +125,12 @@
         </div>
 
         <div class="botao-finalizar">
-            <button data-test="order-btn" class="selecionar-itens" disabled>
-                <h1>Selecione os 3 itens para fechar o pedido</h1>
-            </button>
+
+            <a href="https://wa.me/5537991186784?text=" onClick="location.href=this.href+mensagem;return false;">
+                <button type=" button" data-test="order-btn" class="selecionar-itens" disabled onclick="enviarPedido()">
+                    Selecione os 3 itens<br>para fechar o pedido
+                </button>
+            </a>
         </div><!--fim da div botao-finalizar-->
 
     </div> <!--fim da div container-->
