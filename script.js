@@ -92,7 +92,9 @@ let mensagem;
 
 
 function enviarPedido() {
-    mensagem = `Olá, gostaria de fazer o pedido: \n - Prato: ${prato} \n - Bebida: ${bebida} \n - Sobremesa: ${sobremesa} \n Total: R$ ${(valorPrato + valorBebida + valorSobremesa).toFixed(2)}`;
+
+    const valor = (valorPrato + valorBebida + valorSobremesa).toFixed(2);
+    mensagem = `Olá, gostaria de fazer o pedido: \n - Prato: ${prato} \n - Bebida: ${bebida} \n - Sobremesa: ${sobremesa} \n Total: R$ ${valor}`;
 
     mensagem = encodeURI(mensagem);
 }
