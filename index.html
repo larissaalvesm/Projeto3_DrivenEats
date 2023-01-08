@@ -20,13 +20,13 @@
 <body>
     <div class="container">
 
-        <div class="topo">
+        <header class="topo">
             <h1>DrivenEats</h1>
             <h2>Sua comida em 6 minutos</h2>
-        </div> <!--fim da div topo -->
+        </header> <!--fim da div topo -->
 
         <div class="container-conteudo">
-            <div class="prato">
+            <section class="prato">
                 <h1>Primeiro, seu prato</h1>
                 <div class="cards-prato">
                     <div data-test="dish" class="prato1" onclick="selecionarPrato('.prato1')">
@@ -57,8 +57,8 @@
                         </div>
                     </div>
                 </div>
-            </div><!--fim da div prato-->
-            <div class="bebida">
+            </section><!--fim da div prato-->
+            <section class="bebida">
                 <h1>Agora, sua bebida</h1>
                 <div class="cards-bebida">
                     <div data-test="drink" class="bebida1" onclick="selecionarBebida('.bebida1')">
@@ -89,8 +89,8 @@
                         </div>
                     </div>
                 </div>
-            </div><!--fim da div bebida-->
-            <div class="sobremesa">
+            </section><!--fim da div bebida-->
+            <section class="sobremesa">
                 <h1>Por fim, sua sobremesa</h1>
                 <div class="cards-sobremesa">
                     <div data-test="dessert" class="sobremesa1" onclick="selecionarSobremesa('.sobremesa1')">
@@ -121,17 +121,17 @@
                         </div>
                     </div>
                 </div>
-            </div><!--fim da div sobremesa-->
+            </section><!--fim da div sobremesa-->
         </div>
 
-        <div class="botao-finalizar">
+        <footer class="botao-finalizar">
 
             <a href="https://wa.me/5537991186784?text=" onClick="location.href=this.href+mensagem;return false;">
                 <button type=" button" data-test="order-btn" class="selecionar-itens" disabled onclick="enviarPedido()">
                     Selecione os 3 itens<br> para fechar o pedido
                 </button>
             </a>
-        </div><!--fim da div botao-finalizar-->
+        </footer><!--fim da div botao-finalizar-->
 
     </div> <!--fim da div container-->
 
